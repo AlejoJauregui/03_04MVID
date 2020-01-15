@@ -59,11 +59,6 @@ int main(int, char*[])
         glfwTerminate();
         return -1;
     }*/
-
-    
-
-
-
     //Main Loop
     while(!glfwWindowShouldClose(window)) //Loop until user closes the window
     {
