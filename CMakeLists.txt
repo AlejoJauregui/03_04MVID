@@ -15,6 +15,7 @@ include(cmake/compiler.cmake)
 #****************************************************
 #Engine Source Files
 
+#Call the files that you will be use in the project (Classes and the .hpp)
 set(ENGINE_SRC_FILES
     ${CMAKE_CURRENT_LIST_DIR}/src/engine/camera.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/engine/deps.cpp

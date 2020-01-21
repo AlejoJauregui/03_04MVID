@@ -8,7 +8,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-void handleInput() {/*Intentionally Left BLank*/ }
+void HandleInput() {/*Intentionally Left BLank*/ }
 
 uint32_t createVertexData(uint32_t* VBO, uint32_t* EBO) {
     float vertices[] = {
@@ -114,7 +114,7 @@ int main(int, char* []) {
     glCullFace(GL_BACK);
 
     while (window->alive()) {
-        handleInput();
+        HandleInput();
         render(VAO, shader, tex1, tex2);
         window->frame();
     }

@@ -3,7 +3,7 @@
 #include "engine/window.hpp"
 #include "engine/shader.hpp"
 
-void handleInput() {/*Intentionally Left BLank*/ }
+void HandleInput() {/*Intentionally Left BLank*/ }
 
 uint32_t createVertexData(uint32_t* VBO, uint32_t* EBO) {
     float vertices[] = {
@@ -70,7 +70,7 @@ int main(int, char* []) {
     glCullFace(GL_BACK);
 
     while (window->alive()) {
-        handleInput();
+        HandleInput();
         render(VAO, shader);
         window->frame();
     }

@@ -8,7 +8,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <GLFW/glfw3.h>
 
-void handleInput() {/*Intentionally Left BLank*/ }
+void HandleInput() {/*Intentionally Left BLank*/ }
 
 void render(const Geometry& geom, const Shader& shader, Texture& tex) {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -46,7 +46,7 @@ int main(int, char* []) {
     glCullFace(GL_BACK);
 
     while (window->alive()) {
-        handleInput();
+        HandleInput();
         render(cube, shader, tex);
         window->frame();
     }
