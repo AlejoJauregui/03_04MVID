@@ -102,10 +102,10 @@ void render(uint32_t VAO, uint32_t VAO2, uint32_t program)
     glUseProgram(program);
 
     glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 9, GL_UNSIGNED_INT);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 
     glBindVertexArray(VAO2);
-    glDrawArrays(GL_TRIANGLES, 9, GL_UNSIGNED_INT);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
 }
 
 int main(int, char* [])
@@ -116,13 +116,13 @@ int main(int, char* [])
 
     float verticesTriangle1[] =
     {
-        0.0f, 0.0f, 0.0f,
+       -0.25f, 0.5f, 0.0f,
         -0.5f, 0.0f, 0.0f,
-        -0.25f, 0.5f, 0.0f,
+         0.0f, 0.0f, 0.0f,
     };
     float verticesTriangle2[] =
     {
-        -0.25f, 0.5f, 0.0f,
+        0.0f, 0.0f, 0.0f,
         0.5f, 0.0f, 0.0f,
         0.25f, 0.5f, 0.0f,
     };
@@ -135,7 +135,7 @@ int main(int, char* [])
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
     glEnable(GL_CULL_FACE);
-    glCullFace(GL_FRONT_AND_BACK);
+    glCullFace(GL_BACK);
 
     while (window->alive())
     {
